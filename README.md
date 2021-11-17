@@ -1,5 +1,5 @@
 # What-is-the-front-end
-一个类似PPT的在线文档网站，用一个个例子，按照步骤介绍前端是什么、可以干什么等。
+通过一些例子来演示前端可以干什么，帮助你从感性的角度感受前端之美。
 
 ## Issues
 使用的时候遇到任何问题或有好的建议，请点击进入[issue](https://github.com/hai2007/What-is-the-front-end/issues)，欢迎参与维护！

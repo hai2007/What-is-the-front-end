@@ -8,13 +8,12 @@ import uiBind from 'sprout-ui/nefbl/directive/ui-bind'
 import uiModel from 'sprout-ui/nefbl/directive/ui-model'
 import uiOn from 'sprout-ui/nefbl/directive/ui-on'
 import uiLazy from './directive/ui-lazy'
-import uiCode from './directive/ui-code'
 
 @Module({
     declarations: [
         AppComponent,
         uiBind, uiModel, uiOn,
-        uiLazy, uiCode
+        uiLazy
     ],
     imports: [],
     exports: [],
