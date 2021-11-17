@@ -1,0 +1,30 @@
+{
+  "name": "what-is-the-front-end",
+  "version": "0.1.0",
+  "description": "一个类似PPT的在线文档网站，用一个个例子，按照步骤介绍前端是什么、可以干什么等。",
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "hai2007_nodejs -d build && webpack --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@hai2007/algorithm": "^0.6.3",
+    "@hai2007/nodejs": "^1.1.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@hai2007/polyfill": "^0.1.1",
+    "@hai2007/style": "^0.3.0",
+    "nefbl": "^0.2.3",
+    "sprout-ui": "^0.1.0"
+  }
+}
