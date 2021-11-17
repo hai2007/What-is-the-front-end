@@ -1,4 +1,8 @@
-import { Component } from 'nefbl'
+import { Component, ref } from 'nefbl'
+import urlFormat from '../tool/urlFormat'
+
+import pages from './pages/lazy-load'
+
 
 import style from './index.scss'
 import template from './index.html'
@@ -9,5 +13,45 @@ import template from './index.html'
     styles: [style]
 })
 export default class {
+
+    currentPage: any
+    pageIndex: any
+
+    $setup() {
+        return {
+            currentPage: ref(null),
+            pageIndex: ref(null)
+        }
+    }
+
+    goPre() {
+        if (this.pageIndex > 0) {
+            this.pageIndex -= 1
+        } else {
+            this.pageIndex = pages.length - 1
+        }
+        this.loadPage()
+    }
+
+    goNext() {
+        if (this.pageIndex < pages.length - 1) {
+            this.pageIndex += 1
+        } else {
+            this.pageIndex = 0
+        }
+        this.loadPage()
+    }
+
+    loadPage() {
+        pages[this.pageIndex]().then(data => {
+            this.currentPage = data.default
+        })
+    }
+
+    $mounted() {
+        let pageIndex = +urlFormat(window.location.href).router[0]
+        this.pageIndex = pageIndex >= 0 && pageIndex < pages.length ? pageIndex : 0
+        this.loadPage()
+    }
 
 }

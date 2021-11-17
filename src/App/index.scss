@@ -1,0 +1,81 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: #f5f5f5;
+}
+
+// 控制区域
+.ctrl {
+    &>button {
+        position: fixed;
+        top: calc(50vh - 50px);
+        width: 100px;
+        height: 100px;
+        background-position: center center;
+        background-size: 90px auto;
+        background-repeat: no-repeat;
+        font-size: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-size: 100px auto;
+        }
+
+        &.pre {
+            left: 0;
+            background-image: url('image/pre.png');
+        }
+
+        &.next {
+            right: 0;
+            background-image: url('image/next.png');
+        }
+    }
+}
+
+.fork {
+    user-select: none;
+    position: fixed;
+    transform: rotate(45deg);
+    line-height: 1.6em;
+    transform-origin: 150px 23px;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    top: 71px;
+    right: -62px;
+    width: 300px;
+    background-color: #bac7cd;
+    outline: 4px solid #bac7cd;
+    border: 2px dashed #ffffff;
+    color: #ffffff;
+}
+
+.ruler {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    text-align: center;
+    pointer-events: none;
+
+    &>span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 20px 5px;
+
+        &[active='yes'] {
+            background-color: #00bcd4;
+        }
+
+        &[active='no'] {
+            background-color: #bbdefc;
+        }
+    }
+}

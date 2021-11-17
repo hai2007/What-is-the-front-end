@@ -1,0 +1,22 @@
+<!-- 用于显示主体内容 -->
+<div class="content" ui-lazy='currentPage'></div>
+
+<!-- 用于显示控制 -->
+<div class="ctrl">
+    <button class='pre' title="点击我查看上一页" ui-on:click='goPre'>上一个</button>
+    <button class='next' title="点击我查看下一页" ui-on:click='goNext'>下一个</button>
+</div>
+
+<!-- 源码地址 -->
+<a class='fork' href="https://github.com/hai2007/What-is-the-front-end" target="_blank">Fork Me on Github</a>
+
+<!-- 用于指示当前显示的是谁 -->
+<div class="ruler">
+    <span ui-bind:active='pageIndex==0?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==1?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==2?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==3?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==4?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==5?"yes":"no"'></span>
+    <span ui-bind:active='pageIndex==6?"yes":"no"'></span>
+</div>
