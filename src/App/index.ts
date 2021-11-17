@@ -30,6 +30,7 @@ export default class {
         } else {
             this.pageIndex = pages.length - 1
         }
+        window.location.href = "#" + this.pageIndex
         this.loadPage()
     }
 
@@ -39,6 +40,7 @@ export default class {
         } else {
             this.pageIndex = 0
         }
+        window.location.href = "#" + this.pageIndex
         this.loadPage()
     }
 
