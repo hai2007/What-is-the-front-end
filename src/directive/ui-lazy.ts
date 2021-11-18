@@ -11,7 +11,6 @@ export default class {
         if (binding.value) {
             el.innerHTML = ""
             mountComponent(el, binding.value, this._module)
-            el.children[0].setAttribute('class', 'doc-view')
         }
     }
 }

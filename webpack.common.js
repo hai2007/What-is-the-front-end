@@ -21,6 +21,9 @@ module.exports = {
             loader: ['babel-loader'],
             exclude: /node_modules/
         }, {
+            test: /\.clunch$/,
+            loader: ['clunch/loader.js']
+        }, {
             test: /\.html$/,
             loader: ['./html-loader.js']
         }]
