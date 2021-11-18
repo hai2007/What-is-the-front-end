@@ -3,7 +3,6 @@ import urlFormat from '../tool/urlFormat'
 
 import pages from './pages/lazy-load'
 
-
 import style from './index.scss'
 import template from './index.html'
 
@@ -45,8 +44,8 @@ export default class {
     }
 
     loadPage() {
-        global.pageIndex = this.pageIndex
         pages[this.pageIndex]().then(data => {
+            global.__flag__ = null
             this.currentPage = data.default
         })
     }

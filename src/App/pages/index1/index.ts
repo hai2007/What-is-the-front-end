@@ -21,6 +21,8 @@ export default class {
 
     $mounted() {
 
+        global.__flag__ = 'page1'
+
         // 获取画笔
         let painter = $$("#palette").painter()
 
@@ -83,7 +85,7 @@ export default class {
      * @param {node} outerWave 外wave结点
      */
     renderWave(painter, innerWave, outerWave) {
-        if (global.pageIndex != 0) return
+        if (global.__flag__ != 'page1') return
 
         $$.animation(deep => {
             this.fullWave(painter, this.rate, deep, innerWave, outerWave)
