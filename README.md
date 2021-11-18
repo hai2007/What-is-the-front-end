@@ -1,3 +1,6 @@
+<p align="center"><a href="https://hai2007.github.io/What-is-the-front-end/" target="_blank">
+<img src="./view.png"></a></p>
+
 # What-is-the-front-end
 通过一些例子来演示前端可以干什么，帮助你从感性的角度感受前端之美。
 

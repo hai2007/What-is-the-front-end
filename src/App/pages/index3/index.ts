@@ -1,5 +1,7 @@
 import { Component } from 'nefbl'
 
+const OpenWebExcel = require('open-web-excel')
+
 import style from './index.scss'
 import template from './index.html'
 
@@ -10,5 +12,15 @@ import template from './index.html'
 })
 export default class {
 
+    $mounted() {
+
+        new OpenWebExcel({
+
+            // 编辑器挂载点(必选)
+            el: document.getElementById('excel')
+
+        });
+
+    }
 
 }
