@@ -83,6 +83,8 @@ export default class {
      * @param {node} outerWave 外wave结点
      */
     renderWave(painter, innerWave, outerWave) {
+        if (global.pageIndex != 0) return
+
         $$.animation(deep => {
             this.fullWave(painter, this.rate, deep, innerWave, outerWave)
         }, 2000, () => {

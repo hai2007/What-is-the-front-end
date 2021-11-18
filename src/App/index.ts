@@ -45,6 +45,7 @@ export default class {
     }
 
     loadPage() {
+        global.pageIndex = this.pageIndex
         pages[this.pageIndex]().then(data => {
             this.currentPage = data.default
         })

@@ -29,7 +29,11 @@ export default class {
             precision: 0.1
         })
 
-        setInterval(function () {
+        if (global.interval2) {
+            clearInterval(global.interval2)
+        }
+
+        global.interval2 = setInterval(function () {
 
             // 传递照相机
             image3d.setUniformMatrix("u_matrix", camera.rotateBody(0.02, -1, 1, 0, 1, -1, 0).value())
@@ -61,7 +65,7 @@ export default class {
                     }
 
                 }, 0, -0.7, 0, 0.3, 1.4)
-        }, 100)
+        }, 50)
 
     }
 
