@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{25:function(t,e,r){"use strict";(function(t){
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{29:function(t,e,r){"use strict";(function(t){
 /*!
 * image2D - 🍇 使用ECMAScript绘制二维图片。Drawing Two-Dimensional Pictures Using ECMAScript.
 * git+https://github.com/hai2007/image2D.git

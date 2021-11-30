@@ -47,6 +47,15 @@ export default class {
         pages[this.pageIndex]().then(data => {
             global.__flag__ = null
             this.currentPage = data.default
+
+            if (this.pageIndex == 0) {
+                setTimeout(() => {
+                    document.getElementById('color').click()
+                }, 200)
+            } else {
+                document.getElementById('colors-picker-dialog_btn_cancel').click()
+            }
+
         })
     }
 

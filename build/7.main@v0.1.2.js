@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{28:function(t,e,n){"use strict";(function(t){
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{32:function(t,e,n){"use strict";(function(t){
 /*!
 * Open Web Excel - ✍️ An Excel Used on the Browser Side.
 * git+https://github.com/hai2007/Open-Web-Excel.git

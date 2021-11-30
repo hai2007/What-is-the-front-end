@@ -1,6 +1,6 @@
 {
   "name": "what-is-the-front-end",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "通过一些例子来演示前端可以干什么，帮助你从感性的角度感受前端之美。",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -25,6 +25,7 @@
     "@hai2007/polyfill": "^0.1.1",
     "@hai2007/style": "^0.3.0",
     "clunch": "^2.3.3",
+    "colors-picker": "^0.2.1",
     "image2d": "^1.16.1",
     "image3d": "^3.2.4",
     "nefbl": "^0.2.5",
