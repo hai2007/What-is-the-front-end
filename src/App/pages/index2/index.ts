@@ -1,7 +1,7 @@
 import { Component } from 'nefbl'
 
-const image3D = require('image3d')
-const ThreeGeometry = require('three-geometry')
+import image3D from 'image3d'
+import ThreeGeometry from 'three-geometry'
 
 import style from './index.scss'
 import template from './index.html'
@@ -29,11 +29,11 @@ export default class {
             precision: 0.1
         })
 
-        if (global.__interval2__) {
-            clearInterval(global.__interval2__)
+        if (window['__interval2__']) {
+            clearInterval(window['__interval2__'])
         }
 
-        global.__interval2__ = setInterval(function () {
+        window['__interval2__'] = setInterval(function () {
 
             // 传递照相机
             image3d.setUniformMatrix("u_matrix", camera.rotateBody(0.02, -1, 1, 0, 1, -1, 0).value())

@@ -1,6 +1,6 @@
 import { Component } from 'nefbl'
 
-const OpenWebExcel = require('open-web-excel')
+import OpenWebExcel from 'open-web-excel'
 
 import style from './index.scss'
 import template from './index.html'

@@ -1,5 +1,5 @@
 import { Component, ref } from 'nefbl'
-const $$ = require('image2d')
+import $$ from 'image2d'
 
 import style from './index.scss'
 import template from './index.html'
@@ -21,7 +21,7 @@ export default class {
 
     $mounted() {
 
-        global.__flag__ = 'page1'
+        window['__flag__'] = 'page1'
 
         // 获取画笔
         let painter = $$("#palette").painter()
@@ -85,7 +85,7 @@ export default class {
      * @param {node} outerWave 外wave结点
      */
     renderWave(painter, innerWave, outerWave) {
-        if (global.__flag__ != 'page1') return
+        if (window['__flag__'] != 'page1') return
 
         $$.animation(deep => {
             this.fullWave(painter, this.rate, deep, innerWave, outerWave)

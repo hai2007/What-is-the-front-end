@@ -45,7 +45,7 @@ export default class {
 
     loadPage() {
         pages[this.pageIndex]().then(data => {
-            global.__flag__ = null
+            window['__flag__'] = null
             this.currentPage = data.default
 
             if (this.pageIndex == 0) {
@@ -53,7 +53,8 @@ export default class {
                     document.getElementById('color').click()
                 }, 200)
             } else {
-                document.getElementById('colors-picker-dialog_btn_cancel').click()
+                let colorsBtn = document.getElementById('colors-picker-dialog_btn_cancel')
+                if (colorsBtn) colorsBtn.click()
             }
 
         })

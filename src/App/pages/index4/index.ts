@@ -1,6 +1,6 @@
 import { Component } from 'nefbl'
 
-const OpenWebEditor = require('open-web-editor')
+import OpenWebEditor from 'open-web-editor'
 
 import style from './index.scss'
 import template from './index.html'
@@ -42,7 +42,7 @@ export default class {
                     "execName": "#1e83b1"/*执行方法颜色*/
                 }
             }],
-            content:`<html lang="zh-cn">
+            content: `<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

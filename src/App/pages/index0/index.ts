@@ -1,5 +1,5 @@
 import { Component } from 'nefbl'
-const ColorsPicker = require('colors-picker')
+import ColorsPicker from 'colors-picker'
 
 import style from './index.scss'
 import template from './index.html'
